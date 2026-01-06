@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Xueyuan Gao — Climate Solutions Researcher</title>
+  <meta name="description" content="Xueyuan Gao — Princeton postdoc working on land-based climate solutions, MRV, and voluntary carbon markets. Ballroom dance teacher & competitor." />
+  <meta property="og:title" content="Xueyuan Gao" />
+  <meta property="og:description" content="Climate solutions research • MRV • Voluntary carbon markets • Ballroom dance" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --muted:#a7b4cc;
+      --text:#eaf0ff;
+      --accent:#79e2c5;
+      --accent2:#8ab4ff;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1020px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(900px 400px at 15% 10%, rgba(121,226,197,.18), transparent 60%),
+        radial-gradient(900px 400px at 85% 0%, rgba(138,180,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 50% 110%, rgba(121,226,197,.12), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    a:hover{opacity:.92}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.85), rgba(11,18,32,.35));
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max); margin:0 auto; padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{display:flex; gap:10px; align-items:center; min-width: 180px}
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow:0 0 0 6px rgba(121,226,197,.10);
+    }
+    .brand b{letter-spacing:.2px}
+    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 12px; border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      font-size:14px;
+    }
+    .pill kbd{font-family:var(--mono); font-size:12px; color:var(--muted)}
+    .hero{
+      padding:46px 0 22px;
+      display:grid; gap:18px;
+    }
+    .title{
+      font-size: clamp(30px, 4vw, 54px);
+      line-height:1.05;
+      margin:0;
+      letter-spacing:-.5px;
+    }
+    .subtitle{margin:0; color:var(--muted); font-size:18px; max-width:72ch}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+    .btn{
+      padding:11px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      display:inline-flex; align-items:center; gap:10px;
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn.primary{
+      border:1px solid rgba(121,226,197,.45);
+      background: linear-gradient(135deg, rgba(121,226,197,.18), rgba(138,180,255,.14));
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      margin-top:18px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns: 1fr}
+      .brand{min-width:auto}
+    }
+    .card{
+      background: rgba(15,26,46,.75);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .card h2{margin:0 0 10px; font-size:16px; letter-spacing:.3px}
+    .muted{color:var(--muted)}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+    }
+    .section{margin-top:16px}
+    .list{display:grid; gap:10px; margin:10px 0 0; padding:0; list-style:none}
+    .item{
+      display:flex; justify-content:space-between; gap:16px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+    }
+    .item b{display:block}
+    .item small{color:var(--muted)}
+    .item .right{color:var(--muted); white-space:nowrap}
+    .two{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    @media (max-width: 700px){ .two{grid-template-columns:1fr} }
+    footer{
+      margin-top:26px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    }
+    .sr{position:absolute; left:-9999px}
+    .hr{height:1px; background:var(--border); margin:12px 0}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <b>Xueyuan Gao</b><br/>
+          <span class="muted" style="font-size:12px;">Climate Solutions • MRV • VCM</span>
+        </div>
+      </div>
+
+      <div class="links">
+        <a class="pill" href="#work">Work</a>
+        <a class="pill" href="#projects">Projects</a>
+        <a class="pill" href="#teaching">Dance</a>
+        <a class="pill" href="#contact">Contact <kbd>⌘K</kbd></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="top">
+      <h1 class="title">Climate solutions research,<br/>built to scale in the real world.</h1>
+      <p class="subtitle">
+        I’m a postdoctoral researcher at <b>Princeton University</b> working on land-based climate solutions,
+        carbon–biodiversity outcomes, and robust measurement/monitoring (MRV).
+        I also work closely with the <b>voluntary carbon market</b> and credit integrity debates.
+        Outside the lab, I teach ballroom dance in Princeton and compete professionally.
+      </p>
+
+      <div class="cta">
+        <!-- Replace links below with your real ones -->
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="#" id="cvLink" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <div class="tags" aria-label="Highlights">
+        <span class="tag">Land-based mitigation</span>
+        <span class="tag">Forest carbon & biodiversity</span>
+        <span class="tag">Remote sensing & MRV</span>
+        <span class="tag">Voluntary carbon markets</span>
+        <span class="tag">Article 6 / corresponding adjustments</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card" id="work">
+        <h2>What I do</h2>
+        <p class="muted" style="margin:0;">
+          I build evidence and tools for climate mitigation projects that can withstand real scrutiny—scientifically,
+          operationally, and in markets/policy. My work spans ecological field/forest inventory data, remote sensing,
+          modeling, and integrity-focused assessment for carbon credits.
+        </p>
+
+        <div class="hr"></div>
+
+        <div class="two">
+          <div>
+            <h2 style="margin-top:0;">Research focus</h2>
+            <ul class="list">
+              <li class="item">
+                <div>
+                  <b>Carbon–biodiversity outcomes</b>
+                  <small>Quantifying co-benefits & tradeoffs</small>
+                </div>
+              </li>
+              <li class="item">
+                <div>
+                  <b>MRV & uncertainty</b>
+                  <small>Scalable monitoring, science-based uncertainty</small>
+                </div>
+              </li>
+              <li class="item">
+                <div>
+                  <b>Baseline & additionality</b>
+                  <small>Dynamic baselines & control matching</small>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 style="margin-top:0;">Collaboration</h2>
+            <ul class="list">
+              <li class="item">
+                <div>
+                  <b>Project developers & NGOs</b>
+                  <small>Design, due diligence, measurement plans</small>
+                </div>
+              </li>
+              <li class="item">
+                <div>
+                  <b>Registries & standards</b>
+                  <small>Integrity-aligned accounting and transparency</small>
+                </div>
+              </li>
+              <li class="item">
+                <div>
+                  <b>Academia–policy bridge</b>
+                  <small>Decision-relevant science & methods</small>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card" id="projects">
+        <h2>Selected projects</h2>
+        <ul class="list">
+          <li class="item">
+            <div>
+              <b>Forest inventory → predictive monitoring</b>
+              <small>Scaling carbon & biodiversity estimates</small>
+            </div>
+            <div class="right">MRV</div>
+          </li>
+          <li class="item">
+            <div>
+              <b>Dynamic baseline algorithm</b>
+              <small>Control plot selection & additionality</small>
+            </div>
+            <div class="right">Methods</div>
+          </li>
+          <li class="item">
+            <div>
+              <b>Credit integrity & policy alignment</b>
+              <small>Corresponding adjustments, CORSIA, NDCs</small>
+            </div>
+            <div class="right">VCM</div>
+          </li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>Speaking / writing</h2>
+        <p class="muted" style="margin:0;">
+          Add your talks, papers, op-eds, or blog posts here. This section can also link to a Substack or Medium.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Working papers</span>
+          <span class="tag">Conference talks</span>
+          <span class="tag">Market notes</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section card" id="teaching">
+      <h2>Ballroom dance</h2>
+      <p class="muted" style="margin:0;">
+        I teach ballroom dance in Princeton and compete professionally.
+        If you want coaching, choreography, or a fun intro lesson, reach out.
+      </p>
+      <div class="tags">
+        <span class="tag">Teaching</span>
+        <span class="tag">Performance</span>
+        <span class="tag">Competition</span>
+      </div>
+    </section>
+
+    <section class="section card" id="contact">
+      <h2>Contact</h2>
+      <p class="muted" style="margin:0 0 10px;">
+        Replace the placeholders below with your real info (email + socials). The “copy email” button works after you update it.
+      </p>
+
+      <div class="two">
+        <div class="item" style="align-items:center;">
+          <div>
+            <b>Email</b>
+            <small id="emailText">your.email@princeton.edu</small>
+          </div>
+          <button class="btn" id="copyBtn" type="button" style="cursor:pointer;">Copy</button>
+        </div>
+
+        <div class="item" style="align-items:center;">
+          <div>
+            <b>Location</b>
+            <small>Princeton, NJ</small>
+          </div>
+          <div class="right">ET (UTC−05)</div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="links">
+        <a class="pill" href="#" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Xueyuan Gao</span>
+      <span class="muted">Built with simple HTML/CSS • Fast • No trackers</span>
+    </footer>
+  </main>
+
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Keyboard shortcut: Cmd/Ctrl + K jumps to contact
+    window.addEventListener("keydown", (e) => {
+      const isMac = navigator.platform.toUpperCase().includes("MAC");
+      const cmdOrCtrl = isMac ? e.metaKey : e.ctrlKey;
+      if (cmdOrCtrl && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        document.querySelector("#contact").scrollIntoView({behavior:"smooth"});
+      }
+    });
+
+    // Copy email button (edit the email below after you replace it in HTML)
+    const email = "your.email@princeton.edu";
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(email);
+        const btn = document.getElementById("copyBtn");
+        const prev = btn.textContent;
+        btn.textContent = "Copied!";
+        setTimeout(()=> btn.textContent = prev, 1200);
+      }catch(e){
+        alert("Copy failed. You can manually select and copy the email.");
+      }
+    });
+
+    // Optional: set CV link if you have a PDF hosted
+    // document.getElementById("cvLink").href = "https://yourdomain.com/cv.pdf";
+  </script>
+</body>
+</html>
